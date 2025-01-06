@@ -34,11 +34,15 @@ SOME -- TRUE if any of the subquery values meet the condition
 -- classes
 Date -- used for denoting dates
 DATEDIFF(<date1>,<date2>) -- returns the differences between dates
+
+VarChar -- representation of strings
+LENGTH(<varchar>) -- get length of string
 ```
 
 ## Good problems:
 * Joins:
 	* [1280. Student and Examinations](https://leetcode.com/problems/students-and-examinations/description/?envType=study-plan-v2&envId=top-sql-50)
+	* [570. Managers with at least 5 direct reports](https://leetcode.com/problems/managers-with-at-least-5-direct-reports/submissions/1497923714/?envType=study-plan-v2&envId=top-sql-50)
+		* Make a subtable found counts of mangerId, and the connect that join where managerId = id
 * Case typing
 	* [1251. Average Selling Price](https://leetcode.com/problems/average-selling-price/description/?envType=study-plan-v2&envId=top-sql-50)
-	
