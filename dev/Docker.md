@@ -10,14 +10,8 @@ sudo docker build -t <name_of_image> <path_to_docker_file>
 # Runs a docker image
 # -it runs it in an interactice terminal mode
 # --rm removes the previous version
-# 
-
-sudo docker run -it --rm <name_of_image> 
-
-# 
-sudo docker run -it --rm <name_of_image> 
-
-
+# -v sets a volume 
+sudo docker run -it --rm -v <volume_path>:<volume_name_in_container> <name_of_image> 
 ```
 
 What I run:
