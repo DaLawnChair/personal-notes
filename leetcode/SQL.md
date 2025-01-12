@@ -12,6 +12,7 @@ CROSS JOIN <table> -- returns a table with all possible permuations of rows from
 
 ON <condition> -- select where to join tables on
 where <condition> -- select conditions to select
+having <condition> -- 
 group by <param> -- group the rows by the given param
 ```
 
@@ -30,6 +31,16 @@ SOME -- TRUE if any of the subquery values meet the condition
 <> -- not equals to
 ```
 
+
+```
+--- Common functions
+COUNT(<param>) --- counts the occurances of the given param
+COUNT(*) --- counts the occurances of rows of all the same param values
+SUM(<numerical_param>) --- sums over a numerical param
+AVG(<numerical_param>) --- averages over a numerical param
+COALESCE(<value_list>) --- returns the first non-Null value. Usefull for finding if a value exists or defaulting to a value. 
+```
+
 ```
 -- classes
 Date -- used for denoting dates
@@ -46,3 +57,5 @@ LENGTH(<varchar>) -- get length of string
 		* Make a subtable found counts of mangerId, and the connect that join where managerId = id
 * Case typing
 	* [1251. Average Selling Price](https://leetcode.com/problems/average-selling-price/description/?envType=study-plan-v2&envId=top-sql-50)
+		* uses COALESCE(averagingCalculation, 0) to return 0 by default if the averagingCalculation fails, which is can be due to a division by 0 for count of values its averaging
+	* 
