@@ -35,9 +35,14 @@ SOME -- TRUE if any of the subquery values meet the condition
 ```
 --- Common functions
 COUNT(<param>) --- counts the occurances of the given param
+COUNT(DISTINCT <param>) --- counts the distinct occurances of a given param
 COUNT(*) --- counts the occurances of rows of all the same param values
+
 SUM(<numerical_param>) --- sums over a numerical param
+
 AVG(<numerical_param>) --- averages over a numerical param
+--- specifically you can pass a boolean value inside of here to get the % of values that are True/False
+
 COALESCE(<value_list>) --- returns the first non-Null value. Usefull for finding if a value exists or defaulting to a value. 
 ```
 
@@ -45,11 +50,28 @@ COALESCE(<value_list>) --- returns the first non-Null value. Usefull for finding
 -- classes
 Date -- used for denoting dates
 DATEDIFF(<date1>,<date2>) -- returns the differences between dates
+to_char(<date>, 'YYYY-MM--DD') --- get the Year-month-date of a date object
+
+
 
 VarChar -- representation of strings
 LENGTH(<varchar>) -- get length of string
+
+--- enum
+
 ```
 
+
+```
+--- postgresql differences with Mysql
+
+Integer divison leads to integer, can solve by typecasting the numerator
+	ie top::decimal / bottom or top::numerical / bottom
+
+
+
+
+```
 ## Good problems:
 * Joins:
 	* [1280. Student and Examinations](https://leetcode.com/problems/students-and-examinations/description/?envType=study-plan-v2&envId=top-sql-50)
@@ -58,4 +80,7 @@ LENGTH(<varchar>) -- get length of string
 * Case typing
 	* [1251. Average Selling Price](https://leetcode.com/problems/average-selling-price/description/?envType=study-plan-v2&envId=top-sql-50)
 		* uses COALESCE(averagingCalculation, 0) to return 0 by default if the averagingCalculation fails, which is can be due to a division by 0 for count of values its averaging
-	* 
+
+	* [1193. Monthly Transactions I](https://leetcode.com/problems/monthly-transactions-i/description/?envType=study-plan-v2&envId=top-sql-50)
+		* uses `to_char(<date>,'YYYY-MM')` to get the year and date
+		* converts boolean values to integers for counting # of valid transactions
