@@ -16,5 +16,7 @@
 		* If equal, then return num1
 		* if count for 1 >2, then decrease num1 from top to bottom
 		* if count for 1 <2, then increment num1 from bottom to top, filling in indicies of 0s
-* 
+* [2425. Bitwise XOR of All Pairs](https://leetcode.com/problems/bitwise-xor-of-all-pairings/description/?envType=daily-question&envId=2025-01-16) $\star$
+	* Property of `a XOR a = 0` and XOR is communative, so if the len of nums2 is even, then we perform an even number of XOR for each element of nums1, thus nums1 values equate to 0. Same goes for len of nums1 being even, then nums2 elements don't account. 
+	* Thus take 2 values for XOR'ing each list, defaulting to 0 if the len of the other list is even. Return the XOR of these two sum values.
 **Conceptual videos:**
