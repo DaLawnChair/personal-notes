@@ -27,7 +27,17 @@ class BinaryTree:
 **Example:**
 **Conceptual videos:**
 
+# DFS
 
+## []
+**Lookout for:**
+
+**Idea:**
+**Example:**
+* [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/submissions/1512232232/)
+	* Keep a global counter `diameter`. Do DFS on the left and right, make `diameter = max(diameter,left+right)`. Return `max(left,right)+1` for the DFS and then for the caller function return `diameter`
+
+**Conceptual videos:**
 # Implementation:
 ```python
 # An Iterative Python program to do DFS traversal from 
