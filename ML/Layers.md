@@ -5,7 +5,6 @@ https://github.com/google-research/tuning_playbook
 https://keras.io/keras_tuner/api/tuners/bayesian/
 
 
-
 ## Pooling
 2D filter over each channel of the feature map that summarizes the result
 
@@ -35,3 +34,18 @@ You can have global versions of each, which is just where the filter size is the
 Source for images:
 ![[Pasted image 20250122064820.png]]
 ![[Pasted image 20250122064842.png]]
+
+
+### Deconvolution Layer
+* transposed convolution process that effectively upsamples data to a higher resolution
+
+#### Recurrent Layer
+
+
+
+
+Skip connections
+Residual Blocks
+
+Skip connections  (ie Resnet) https://chautuankien.medium.com/skip-connection-and-explanation-of-resnet-afabe792346c
+

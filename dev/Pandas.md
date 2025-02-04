@@ -12,6 +12,7 @@ df['param'] = df['elseCondition']
 df.loc[ (df['param1']==val1) & (df['param2']==val2) | .... ] = df['ifCondition']   
 ```
 
+
 [Minimizing space taken by dataframes](https://www.youtube.com/watch?v=u4rsA5ZiTls)
 * `df.to_csv("path",index=False)` is fairly slow
 	* OK if you are sharing it and viewing it on Excel
@@ -21,3 +22,40 @@ df.loc[ (df['param1']==val1) & (df['param2']==val2) | .... ] = df['ifCondition']
 * BUT FOR THE BEST IMPROVEMENTS, use parquet
 	* First ensure you have it installed with `pip install pyarrow` or `pip install fastparquet`
 	* `df.to_parquet("path",index=False)`
+
+[Optimizing data manipulation with vectorization](https://www.youtube.com/watch?v=nxWginnBklU)
+![[Pasted image 20250125143833.png]]
+Using np.where is equivalent to using the vectorization. Using .values explicitly sheds all things other than the value itself, furthering improving time.
+
+np.select(conditon, choices, default="NA")
+```python
+conditions = [
+	df['data_col1'] == df['data_col2'],,
+	(df['norm_status'].str.startswith('cli') & df['norm_status'].str.endswith('.txt')) ,
+	df['norm_status'].isin(multi_touch_leads),
+	df['norm_status'].isin(eng_multit_leads)
+	]
+
+choices = [
+	'new leads',
+	'client leads',
+	'mtouch leads',
+	'emtouch leads'
+	]
+
+df['leafcat'] = np.select(conditions, choices, default='other')
+```
+equivalent to if elif else statements. note that the 2nd condition is an nested if statements.
+
+### dictionary look ups
+```python
+def a_dict_lookup(row):
+	if row['providers']>7:
+		return 'upmarket'
+	else:
+		channel = channel_dict.get(row['Category'])
+		return channel
+#SAME BUT WAY FASTER
+df['dict_lookup'] = np.where(df['providers']>7, 'upmarket', 
+							 df['category'].map(channel_dict))
+```
