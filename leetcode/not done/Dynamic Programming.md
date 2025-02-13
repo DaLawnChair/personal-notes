@@ -27,7 +27,7 @@
 	* The # of ways to make the ith value inside of the dp table is based on `dp[i] + dp[i-coin]` for all coins. Because of this we have 2 loops, the first one is for iterates over all coins, then the internal one loops over `[coins[i], amount+1]` for values that it can control. And here we count the # of ways we can make this.
 	* I was thinking before the other way, counting the values and then count the coins that can solve it like in the original coin change problem. However that way was convoluted since
 		* it double counted every value (ie 5 = 1+1+2 was double counted with 5 = 2+1+1)
-		* also worried aobut the conditions on when and how to increment the count.
+		* also worried about the conditions on when and how to increment the count.
 	* The former version doesn't double count becasue of our choice of start and end. 
 **Conceptual videos:**
 * https://www.youtube.com/watch?v=aPQY__2H3tE 

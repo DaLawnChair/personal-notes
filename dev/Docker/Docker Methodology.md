@@ -1,12 +1,12 @@
-Docker is used mainly in the space for developing, shipping, testing, and running applications through isolated enviornments called containers.
+Docker is used mainly in the space for developing, shipping, testing, and running applications through isolated environments called containers.
 
 Containers are:
 * isolated, doesn't rely on what is on the host computer
-* can be run simutaniosuly
+* can be run simultaneously
 * has everything that is used to run an application
 * can be shared
 
-Docker is great for Continous integration and continous delievery workflows (CI/CD)
+Docker is great for Continuous integration and continous delievery workflows (CI/CD)
 * develop code locally on an exact reannactment of the server system
 * run automated and manual tests in a test environment every push
 * easily push the environment used for bugfixing to live systems
