@@ -1,4 +1,4 @@
-Feature Pyramid Networks
+ Feature Pyramid Networks
 https://www.youtube.com/watch?v=FKsgO0U7CUw
 * Images can be scaled down in stages. Let input= \[1 3 416 416\]:
 	* Low level : \[1 128 52 52\], for small detections

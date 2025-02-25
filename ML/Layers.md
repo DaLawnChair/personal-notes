@@ -3,8 +3,6 @@
 https://www.geeksforgeeks.org/what-are-convolution-layers/
 https://github.com/google-research/tuning_playbook
 https://keras.io/keras_tuner/api/tuners/bayesian/
-
-
 ## Pooling
 2D filter over each channel of the feature map that summarizes the result
 
