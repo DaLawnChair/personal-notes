@@ -1,4 +1,3 @@
-## []
 **Lookout for:**
 
 **Idea:**
@@ -29,5 +28,10 @@
 		* it double counted every value (ie 5 = 1+1+2 was double counted with 5 = 2+1+1)
 		* also worried about the conditions on when and how to increment the count.
 	* The former version doesn't double count becasue of our choice of start and end. 
+* [198. House Robbers](https://leetcode.com/problems/house-robber/description/)
+	* Pretty standard, same idea as coin change
+* [213. House Robbers II](https://leetcode.com/problems/house-robber-ii/description/)
+	* just House Robbers 1 but doing it twice, once with the last vaule excluded and the other time with the first value excluded
+	
 **Conceptual videos:**
 * https://www.youtube.com/watch?v=aPQY__2H3tE 

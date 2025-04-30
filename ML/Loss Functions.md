@@ -46,21 +46,10 @@ Quantile Loss
 
 For Object Detection
 
-
-Regularization:
-* penalizes model complexity during training 
-* Without it, in logistical models, the asymptotic nature of logistic regression would keep driving loss towards 0 in cases where the model has a large number of features.
-* Strategies:
-	* [[L_2 regularization]]
-	* Early Stopping:
-		* Limiting training epochs by some patience after a minimium loss is maintained, before it fully converges
-		* Quick and easy, but not great way of regulariziting models, much better to L_2 regularization
-
 [[Regularization rate (lambda)]]
 [[Learning Rate]]
 
 
-https://developers.google.com/machine-learning/crash-course/overfitting/model-complexity <- regularization 
 
 
 https://builtin.com/machine-learning/common-loss-functions <- loss function
