@@ -4,18 +4,22 @@
 * Bad for imbalanced datasets
 
 ### $Precision = \frac{\text{correctly classified actual positives}}{\text{everything classified as  positives}}=\frac{TP}{TP + FP}$
-* aka positive predicted value
+* aka positive predicted value (PPV)
 * ratio of relevant retrieved instances over all retrived instances
 * "how well you can find true positives(TP) out of all positive predictions"
 * Use when it's very important for positive predictions to be accurate.
 
-### $FPR = \frac{\text{incorrectly classified actual positives}}{\text{all actual negatives}}=\frac{FP}{FP + TN}$
+### $\text{False Positive Rate} = \frac{\text{incorrectly classified actual positives}}{\text{all actual negatives}}=\frac{FP}{FP + TN}$
+* Aka FPR
 * Use when false positives are more expensive than false negatives.
 
 ### $Recall = \frac{\text{correctly classified actual positives}}{\text{all classified positives}}=\frac{TP}{TP + FN}$
 * aka sensitivity, true positive rate (TPR)
-* "how well you can find true positives(TP) out of all predictions(TP+FN)"
+* "how well you can find true positives(TP) out of all correct predictions(TP+FN)"
 * Use when false negatives are more expensive than false positives.
+### $Specificity = \frac{\text{number of true negatives}}{\text{total number of negatives}}=\frac{TN}{TN + FP}$
+* aka true negative rate (TNR)
+* "how well you can find true negatives(TN) out of all negative predictions(TN+FP)"
 
 
 Precision improves as false positives decrease, while recall improves when false negatives decrease.
@@ -25,8 +29,6 @@ Precision improves as false positives decrease, while recall improves when false
 * most general metric for evaluating models
 * F1 high implies both are high
 
-
-
 ##### $\text{Average Precision} = \int_{0}^{1}P(R)dR$
 * Effectively AUC of the Precision-Recall Curve
 * mAP is just the average precision for all IoU intervals for all classes
@@ -34,7 +36,6 @@ Precision improves as false positives decrease, while recall improves when false
 ##### $mAP = \frac{1}{n} \sum_{k=1}^{k=n} AP_{k}$
 * where Ap_k is the AP of the class k
 * n is the number of classes
-
 
 Confusion Matrix:
 * representation of TP,TN,FP,FN 
@@ -58,7 +59,7 @@ Threshold: a numerical value deciding the minimum probability needed for a predi
 
 ROC 
 * reciever operator characteristic
-* calculates TPR and FPR at thresholds, a
+* calculates TPR and FPR at thresholds
 AUC-ROC:
 * area under the ROC curve
 * represents the probability that the model, if given a randomly chosen positive and negative example, will rank the positive higher than the negative

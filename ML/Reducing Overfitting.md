@@ -4,7 +4,7 @@ Ranked:
 * Batch normalization
 	* Faster convergence
 * Weight decay
-* L1 and L2 regularization
+* [[L_1 Regularization]] and [[L_2 regularization]]
 * Early Stopping
 	* Finkicky to tune patience and doesn't guarentee it has finished training fully when it has passed the threshold
 * Data augmentation

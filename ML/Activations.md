@@ -21,5 +21,7 @@ $f(x) = max(0,x)$
 Leaky ReLU
 $f(x) = x if x>=0, a\cdot x otherwise$
 * small choice of a
-* fixes dying relu problem
+* fixes dying relu problem:
+	* neuron outputs 0 instead of a negative value, which can propogate into the network with no activation instead of a negative interaction
+	* Once it outs 0 once, it is hard for it to change because the gradient is calculated wrt to the original value, and the function gradient of 0 is always 0
 * use when weights do not update during training

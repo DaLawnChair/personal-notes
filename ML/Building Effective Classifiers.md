@@ -17,7 +17,6 @@ Can also use data augmentation on the images themselves
 Could also use image generation tools too.
 * [Dreambooth - synthethic text-to-image generation given 3-5 images](https://dreambooth.github.io/)
 	* Not sure what I'd change to the images though other than 'make light green, not red' or 'make arrow green and bulb red'
-* 
 ## Feature selection
 Select features that minimize variance between all pieces of data across the dataset. 
 * If variance is high, drop some features
@@ -41,6 +40,5 @@ Remove outliers from the dataset
 
 ## Regulization techniques
 Reduces complexity of models by reducing the amount the weights and/or biases change as model trains.
-
 * Batch normalization: Normalizes inputs of each layer to reduce covariance shift and improve learning rate
 * L1 and L2: add penalty term to loss function based on magnitude of weights

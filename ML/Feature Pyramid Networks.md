@@ -11,7 +11,7 @@ Receptive fields:
 * representation of a cell in a downsampled image to the original image
 	* Ie a pixel from an image with 512 features will correspond to a large number of cells inside the original image
 
-Feature Pyramid Networks (FNP) combines these levels into a single feature map for all stages, regardless of which level you are on
+Feature Pyramid Networks (FPN) combines these levels into a single feature map for all stages, regardless of which level you are on
 
 "A top down architecture with lateral connections is developed for building high-level semantic feature maps at all scales"
 
