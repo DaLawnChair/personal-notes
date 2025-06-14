@@ -881,3 +881,107 @@ annotation-target: prejohned/Fluent Python.pdf
 >%%TAGS%%
 >
 ^ez7qt7ba43k
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:27:53.340Z","text":"The built-in dict already orders the keys sinse Python3.6.\n\nThere are some differences between them through as listed below","updated":"2025-05-19T21:27:53.340Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":255686,"end":255990},{"type":"TextQuoteSelector","exact":"Now  that  the  built-in  dict  also  keeps  the  keys  ordered  since  Python  3.6,  the  mostcommon reason to use OrderedDict is writing code that is backward compatible withearlier Python versions. Having said that, Python’s documentation lists some remain‐ing differences between dict and OrderedDict","prefix":" page 90.collections.OrderedDict","suffix":", which I quote here—only reorde"}]}]}
+>```
+>%%
+>*%%PREFIX%%page 90.collections.OrderedDict%%HIGHLIGHT%% ==Now  that  the  built-in  dict  also  keeps  the  keys  ordered  since  Python  3.6,  the  mostcommon reason to use OrderedDict is writing code that is backward compatible withearlier Python versions. Having said that, Python’s documentation lists some remain‐ing differences between dict and OrderedDict== %%POSTFIX%%, which I quote here—only reorde*
+>%%LINK%%[[#^lfcuh1r2kkl|show annotation]]
+>%%COMMENT%%
+>The built-in dict already orders the keys sinse Python3.6.
+>
+>There are some differences between them through as listed below
+>%%TAGS%%
+>
+^lfcuh1r2kkl
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:30:03.375Z","text":"Basically just a collections of other mappings. \n\nIf matching keys, it will only use the first one given.\n\nIf edited, it will only affect the first mapping ","updated":"2025-05-19T21:30:03.375Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":256803,"end":256823},{"type":"TextQuoteSelector","exact":"collections.ChainMap","prefix":"s (for example, in anLRU cache).","suffix":"A ChainMap instance holds a list"}]}]}
+>```
+>%%
+>*%%PREFIX%%s (for example, in anLRU cache).%%HIGHLIGHT%% ==collections.ChainMap== %%POSTFIX%%A ChainMap instance holds a list*
+>%%LINK%%[[#^9e5zoau7yuq|show annotation]]
+>%%COMMENT%%
+>Basically just a collections of other mappings. 
+>
+>If matching keys, it will only use the first one given.
+>
+>If edited, it will only affect the first mapping 
+>%%TAGS%%
+>
+^9e5zoau7yuq
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:30:50.610Z","updated":"2025-05-19T21:30:50.610Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":257349,"end":257472},{"type":"TextQuoteSelector","exact":"Updates  or  insertions  to  a  ChainMap  only  affect  the  first  input  mapping.  Con‐tinuing from the previous example:","prefix":"ut  holds  references  tothem.  ","suffix":">>> chain['c'] = -1>>> d1{'a': 1"}]}]}
+>```
+>%%
+>*%%PREFIX%%ut  holds  references  tothem.%%HIGHLIGHT%% ==Updates  or  insertions  to  a  ChainMap  only  affect  the  first  input  mapping.  Con‐tinuing from the previous example:== %%POSTFIX%%>>> chain['c'] = -1>>> d1{'a': 1*
+>%%LINK%%[[#^41jnssxvsld|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^41jnssxvsld
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:31:03.373Z","updated":"2025-05-19T21:31:03.373Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":257552,"end":257735},{"type":"TextQuoteSelector","exact":"ChainMap is useful to implement interpreters for languages with nested scopes, whereeach mapping represents a scope context, from the innermost enclosing scope to theoutermost  scope.","prefix":"1}>>> d2{'a': 2, 'b': 4, 'c': 6}","suffix":"  The  “ChainMap  objects”  sect"}]}]}
+>```
+>%%
+>*%%PREFIX%%1}>>> d2{'a': 2, 'b': 4, 'c': 6}%%HIGHLIGHT%% ==ChainMap is useful to implement interpreters for languages with nested scopes, whereeach mapping represents a scope context, from the innermost enclosing scope to theoutermost  scope.== %%POSTFIX%%The  “ChainMap  objects”  sect*
+>%%LINK%%[[#^kvk4xlt58tl|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^kvk4xlt58tl
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:31:17.214Z","updated":"2025-05-19T21:31:17.214Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":258125,"end":258193},{"type":"TextQuoteSelector","exact":"ollections.CounterA mapping that holds an integer count for each key","prefix":"he Scheme programming language.c","suffix":". Updating an existing key adds "}]}]}
+>```
+>%%
+>*%%PREFIX%%he Scheme programming language.c%%HIGHLIGHT%% ==ollections.CounterA mapping that holds an integer count for each key== %%POSTFIX%%. Updating an existing key adds*
+>%%LINK%%[[#^minakst00hm|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^minakst00hm
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:32:43.226Z","text":"sehelve.Shelf is basically only good for converting mappings into pickle files","updated":"2025-05-19T21:32:43.226Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":259171,"end":259335},{"type":"TextQuoteSelector","exact":"The shelve module in the standard library provides persistent storage for a mappingof  string  keys  to  Python  objects  serialized  in  the  pickle  binary  forma","prefix":" element in the set.shelve.Shelf","suffix":"t.  The  curiousname of shelve m"}]}]}
+>```
+>%%
+>*%%PREFIX%%element in the set.shelve.Shelf%%HIGHLIGHT%% ==The shelve module in the standard library provides persistent storage for a mappingof  string  keys  to  Python  objects  serialized  in  the  pickle  binary  forma== %%POSTFIX%%t.  The  curiousname of shelve m*
+>%%LINK%%[[#^msb760jdj1|show annotation]]
+>%%COMMENT%%
+>sehelve.Shelf is basically only good for converting mappings into pickle files
+>%%TAGS%%
+>
+^msb760jdj1
+
+
+>%%
+>```annotation-json
+>{"created":"2025-05-19T21:43:16.137Z","updated":"2025-05-19T21:43:16.137Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":265319,"end":265386},{"type":"TextQuoteSelector","exact":"MappingProxyType builds a read-only mappingproxy instance from adic","prefix":"ief demonstration.Example 3-10. ","suffix":"t>>> from types import MappingPr"}]}]}
+>```
+>%%
+>*%%PREFIX%%ief demonstration.Example 3-10.%%HIGHLIGHT%% ==MappingProxyType builds a read-only mappingproxy instance from adic== %%POSTFIX%%t>>> from types import MappingPr*
+>%%LINK%%[[#^beo2tdrsu2|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^beo2tdrsu2

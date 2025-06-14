@@ -1,5 +1,5 @@
 * Fundamentally how these machine learning frameworks are able to execute model inferencing and training.
-* The goals of these are to implement a version of [[Automatic Differentiation (AD)]] in order to compute partial derivatives for the graph
+* The goals of these are to implement a version of [[()()Automatic Differentiation (AD)]] in order to compute partial derivatives for the graph
 * works by constructing graphs containing control flow and data structures to handle and process data
 * Domains of interest: deep learning, physics engines, robotics, electronics, ray tracing, image processing, probabilistic programming
 * Represented in two groups:

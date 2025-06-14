@@ -60,7 +60,7 @@ What methods are used to compute it?
 	```
 * Source code transformation ()()
 Other methods:
-* Manua Differentation
+* Manual Differentation
 	* Finding the derivative of even given function
 	* Tedious when you have many many terms to calculate partial deriviatives of various degrees for
 * Numerical:
