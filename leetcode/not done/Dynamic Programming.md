@@ -32,6 +32,34 @@
 	* Pretty standard, same idea as coin change
 * [213. House Robbers II](https://leetcode.com/problems/house-robber-ii/description/)
 	* just House Robbers 1 but doing it twice, once with the last vaule excluded and the other time with the first value excluded
-	
+* [91. Decode Ways](https://leetcode.com/problems/decode-ways/submissions/1715306138/) $\star$
+	* Use a 1-D DP table keeping track of the number of ways to decode at the the idx of the string s.
+	* Need to segment between when the previous character is a 0 and if the current character is a 0.
+		* if current is not 0, then you need to consider new ways to generate the charcter if prev is 1 or 2. If so, then it is just the number of ways to make the previous character + before the previous character `dp[i] = dp[i-1] + dp[i-2] if i-2>0 else 1`. Otherwise it continues the streak from before
+		* if current is 0, then it is the same there are no new considerations and the response reverts back to 2 previous enteries `dp[i]=dp[i-2] if i-2>0 else 1`
+			* if prev is also 0, then the code is invalid if prev is not 1 or 2, thus return 0
+	* Many many edge cases when having to deal with 0 
+
+
+## Kadane's Algorithm
+A simple algorithm for calcuating the maximum sum of an array in O(n) time an O(1) space:
+```python
+  
+def max_subarray(numbers):
+    """Find the largest sum of any contiguous subarray."""
+    best_sum = float('-inf')
+    current_sum = 0
+    for x in numbers:
+        current_sum = max(x, current_sum + x)
+        best_sum = max(best_sum, current_sum)
+    return best_sum
+```
+note this doesn't work for empty subarrays, where it should be `best_sum=0` and `current_sum=max(0,current_sum+x)`
+A fair amount of "fake" DP problems, ie problems that are solvable as such, but do not have memoization or the same concept that yields a good solution.
+This is also a greedy problem
+
+* [5. Longest Palindrome Substring](https://leetcode.com/problems/longest-palindromic-substring/description/)
+	* Key idea is that you can compare from inner outwardly and then keep track of what solutions are still palindromes by comparing the new ends. Need to do so for both even and odd lengths
+	* DP Approach: use a 2D DP table where the first value is start, second value is end index. Initalize all dp\[i]\[i] values as True (as they are single elements) and all even dp\[i]\[i+1] as true if s\[i]\==s\[i+1] (even palindroms). If dp\[i+1]\[j-1] is a palindrome, then you just need to check over different widths and verify that it is a palindrome
 **Conceptual videos:**
 * https://www.youtube.com/watch?v=aPQY__2H3tE 

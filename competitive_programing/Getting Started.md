@@ -22,3 +22,8 @@ It is very easy to read too advanced topic and lose focus on simplier solutions
 * leetcode weekly/biweekly contests
 * AtCoder beginner
 * Codeforces div.3leeee
+
+# Resources for information:
+[Land a Quantitative Research Job in 2025 | Roadmap](https://www.youtube.com/@AlgebraicContinuation)
+K
+

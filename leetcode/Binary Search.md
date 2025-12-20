@@ -1,6 +1,7 @@
 **Lookout for:**
-* Solutions of O(log(n))
+* Solutions of O(log(n)), or a very optimal solution
 * Finding values in a sorted list pattern (any sorted list)
+* For asking questions regarding first instance, smallest such instsance, within an array  
 **Idea:**
 ```python
 def binarySearch(list: List[],target:object) -> int: 
@@ -22,6 +23,33 @@ Complexity
 * Time Complexity: $O(log(n))$
 * Space complexity: $O(1)$
 
+This is the most simple case we see, but is there a more general solution that encapsulates more information (ie duplicates?)
+```python
+def generalize_binarySearch(list: List[],target:object) -> int: 
+	"""
+	We return 2 values, first one will point to the index where we'd want to insert a new value next to the target, and the index of the target inside of list, if it exists 
+	"""
+	# Where list is a sorted array
+	low = 0
+	high = len(list)-1
+	
+	while low<=high:
+		mid = (low+high)//2
+		if list[mid]<=target:
+			low=mid+1
+		else:
+			high=mid-1
+
+	# add a case when value is not found
+	if not (r>0 and r<len(list) and list[r]==target):
+		return l, -1
+	return l,r # right will point to the last instance where list[mid]==target, and l will point to the value after it (ie the item where you want to add an element the right of target) 
+```
+* The property of returning the left pointer is exactly that `bisect.bisect_right(items,target)` does
+* This will inheritenly make right point to the last instance of the value,
+	* if we are to want to get the first instance, we will want to change the line to `if list[mid]<target:`
+		* the left pointer will be the index of which we should add another element after the first instance of target, which is what `bisect.bisect_left(items,target)` 
+
 When should `low<=high` or `low<high`?
 * Look out for special cases such as `[1]`
 * `low<=high` always holds if you don't mess it up
@@ -34,6 +62,9 @@ Infinite loops:
 * choice of low, right, and while condition depends on the choice here
 	* always have it so that we have exactly 1 value left after the while loop terminates
 	* Think the case of having 2 elements left, does the loop terminate? If not, reconsidered your choice on the low and right conditions
+
+Off by one error:
+
 **Example:**
 * [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 	* Make a new sequence where from  `[1,2,...,max(pile)]` is the domain where we binary search for the lowest possible value for the # of bananas we eat. We want to minimize the lower bound so we do `left=mid+1` or `high=mid` while `low<high` 
@@ -42,8 +73,10 @@ Infinite loops:
 * [33. Search in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/) $\star\star\star$
 	* `[too long to type]`
 	* https://www.youtube.com/watch?v=U8XENwh8Oy8
+	* Way better strategy is just split find the pivot through `nums[i-1]>nums[i]`, and then doing binary search on the two sides. Then take conditions based on which one is none and return the other
 * [981. Time Based Key Value Store](https://leetcode.com/problems/time-based-key-value-store/description/)
 	* Adding a hashmap to a binary tree in for most recent value of a given key
 **Conceptual videos:**
 * Basics and why we choose the boundaries and pointer values: https://labuladong.gitbook.io/algo-en/iii.-algorithmic-thinking/detailedbinarysearch
 * Similar to above: https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/
+* Good generalization of binary search and the meaning behind the our if/else conditions: https://www.youtube.com/watch?v=1IOp0jyu128

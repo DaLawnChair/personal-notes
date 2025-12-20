@@ -985,3 +985,110 @@ annotation-target: prejohned/Fluent Python.pdf
 >%%TAGS%%
 >
 ^beo2tdrsu2
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-13T20:55:12.487Z","text":"dict_values is a private class, and cannot be constructed","updated":"2025-07-13T20:55:12.487Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/ML/Languages/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":267956,"end":268202},{"type":"TextQuoteSelector","exact":"he classes dict_keys, dict_values, and dict_items are internal: they are not avail‐able via __builtins__ or any standard library module, and even if you get a referenceto one of them, you can’t use it to create a view from scratch in Python code:","prefix":"8 That’s how tuples are stored.T","suffix":">>> values_class = type({}.value"}]}]}
+>```
+>%%
+>*%%PREFIX%%8 That’s how tuples are stored.T%%HIGHLIGHT%% ==he classes dict_keys, dict_values, and dict_items are internal: they are not avail‐able via __builtins__ or any standard library module, and even if you get a referenceto one of them, you can’t use it to create a view from scratch in Python code:== %%POSTFIX%%>>> values_class = type({}.value*
+>%%LINK%%[[#^extthgud9|show annotation]]
+>%%COMMENT%%
+>dict_values is a private class, and cannot be constructed
+>%%TAGS%%
+>
+^extthgud9
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T04:56:15.630Z","text":"Sets are containers of unique values without a particular ordering to them and can be used to perform set logic. They can be easily converted to different container types\n","updated":"2025-07-18T04:56:15.630Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":272513,"end":272973},{"type":"TextQuoteSelector","exact":"In addition to enforcing uniqueness, the set types implement many set operations asinfix operators, so, given two sets a and b, a | b returns their union, a & b computesthe intersection, a - b the difference, and a ^ b the symmetric difference. Smart useof  set  operations  can  reduce  both  the  line  count  and  the  execution  time  of  Pythonprograms, at the same time making code easier to read and reason about—by remov‐ing loops and conditional logic","prefix":" frozensetelements inside a set.","suffix":".For  example,  imagine  you  ha"}]}]}
+>```
+>%%
+>*%%PREFIX%%frozensetelements inside a set.%%HIGHLIGHT%% ==In addition to enforcing uniqueness, the set types implement many set operations asinfix operators, so, given two sets a and b, a | b returns their union, a & b computesthe intersection, a - b the difference, and a ^ b the symmetric difference. Smart useof  set  operations  can  reduce  both  the  line  count  and  the  execution  time  of  Pythonprograms, at the same time making code easier to read and reason about—by remov‐ing loops and conditional logic== %%POSTFIX%%.For  example,  imagine  you  ha*
+>%%LINK%%[[#^5fd7t95dqzo|show annotation]]
+>%%COMMENT%%
+>Sets are containers of unique values without a particular ordering to them and can be used to perform set logic. They can be easily converted to different container types
+>
+>%%TAGS%%
+>
+^5fd7t95dqzo
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T04:58:10.314Z","text":"frozen sets must use a constructor. They;re main benefit are that they can be hashed and are not mutable","updated":"2025-07-18T04:58:10.314Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":276279,"end":276495},{"type":"TextQuoteSelector","exact":"There  is  no  special  syntax  to  represent  frozenset  literals—they  must  be  created  bycalling  the  constructor.  The  standard  string  representation  in  Python  3  looks  like  afrozenset constructor call","prefix":"pecialized BUILD_SET bytecode.10","suffix":". Note the output in the console"}]}]}
+>```
+>%%
+>*%%PREFIX%%pecialized BUILD_SET bytecode.10%%HIGHLIGHT%% ==There  is  no  special  syntax  to  represent  frozenset  literals—they  must  be  created  bycalling  the  constructor.  The  standard  string  representation  in  Python  3  looks  like  afrozenset constructor call== %%POSTFIX%%. Note the output in the console*
+>%%LINK%%[[#^nwiv8evfu78|show annotation]]
+>%%COMMENT%%
+>frozen sets must use a constructor. They;re main benefit are that they can be hashed and are not mutable
+>%%TAGS%%
+>
+^nwiv8evfu78
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T05:01:11.657Z","updated":"2025-07-18T05:01:11.657Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":282053,"end":282119},{"type":"TextQuoteSelector","exact":"Table 3-3. Set comparison operators and methods that return a bool","prefix":"thods that return True or False.","suffix":"Math symbol Python operator Meth"}]}]}
+>```
+>%%
+>*%%PREFIX%%thods that return True or False.%%HIGHLIGHT%% ==Table 3-3. Set comparison operators and methods that return a bool== %%POSTFIX%%Math symbol Python operator Meth*
+>%%LINK%%[[#^u3xp36ygjs8|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^u3xp36ygjs8
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T05:01:20.777Z","updated":"2025-07-18T05:01:20.777Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":280388,"end":280516},{"type":"TextQuoteSelector","exact":"Table 3-2. Mathematical set operations: these methods either produce a new set or updatethe target set in place, if it’s mutable","prefix":"or methods omitted for brevity).","suffix":"MathsymbolPythonoperatorMethod D"}]}]}
+>```
+>%%
+>*%%PREFIX%%or methods omitted for brevity).%%HIGHLIGHT%% ==Table 3-2. Mathematical set operations: these methods either produce a new set or updatethe target set in place, if it’s mutable== %%POSTFIX%%MathsymbolPythonoperatorMethod D*
+>%%LINK%%[[#^kls1tg1vlk|show annotation]]
+>%%COMMENT%%
+>
+>%%TAGS%%
+>
+^kls1tg1vlk
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T05:01:58.857Z","text":"can kinda think of dictionary views as frozensets as they have similar properties\n","updated":"2025-07-18T05:01:58.857Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","target":[{"source":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf","selector":[{"type":"TextPositionSelector","start":283468,"end":283590},{"type":"TextQuoteSelector","exact":"Table 3-5 shows that the view objects returned by the dict methods .keys()and .items() are remarkably similar to frozenset","prefix":"set.Set Operations on dict Views","suffix":".Table 3-5. Methods implemented "}]}]}
+>```
+>%%
+>*%%PREFIX%%set.Set Operations on dict Views%%HIGHLIGHT%% ==Table 3-5 shows that the view objects returned by the dict methods .keys()and .items() are remarkably similar to frozenset== %%POSTFIX%%.Table 3-5. Methods implemented*
+>%%LINK%%[[#^x0itflz4v7d|show annotation]]
+>%%COMMENT%%
+>can kinda think of dictionary views as frozensets as they have similar properties
+>
+>%%TAGS%%
+>
+^x0itflz4v7d
+
+
+>%%
+>```annotation-json
+>{"created":"2025-07-18T05:05:01.515Z","text":"Chapters read:\n\nPart 1: Data Structures:\n1. the python data model\n2. an array of sequences\n3. dictionary and sets\n4. unicode text versus bytes (skipped)\n","updated":"2025-07-18T05:05:01.515Z","document":{"title":"Fluent%20Python.pdf","link":[{"href":"urn:x-pdf:6c0e57d4e55a6ced4ae3ca1cc17e1b51"},{"href":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}],"documentFingerprint":"6c0e57d4e55a6ced4ae3ca1cc17e1b51"},"uri":"vault:/devnotes/Python/prejohned/Fluent%20Python.pdf"}
+>```
+>%%
+>*%%PREFIX%%%%HIGHLIGHT%% ==== %%POSTFIX%%*
+>%%LINK%%[[#^xcsvvgdxx98|show annotation]]
+>%%COMMENT%%
+>Chapters read:
+>
+>Part 1: Data Structures:
+>1. the python data model
+>2. an array of sequences
+>3. dictionary and sets
+>4. unicode text versus bytes (skipped)
+>
+>%%TAGS%%
+>
+^xcsvvgdxx98
