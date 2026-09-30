@@ -41,14 +41,35 @@ def generalize_binarySearch(list: List[],target:object) -> int:
 			high=mid-1
 
 	# add a case when value is not found
-	if not (r>0 and r<len(list) and list[r]==target):
-		return l, -1
-	return l,r # right will point to the last instance where list[mid]==target, and l will point to the value after it (ie the item where you want to add an element the right of target) 
+	if not (high>0 and high<len(list) and list[high]==target):
+		return low, -1
+	return low,high # high will point to the last instance where list[mid]==target, and low will point to the value after it (ie the item where you want to add an element the right of target) 
 ```
 * The property of returning the left pointer is exactly that `bisect.bisect_right(items,target)` does
 * This will inheritenly make right point to the last instance of the value,
 	* if we are to want to get the first instance, we will want to change the line to `if list[mid]<target:`
 		* the left pointer will be the index of which we should add another element after the first instance of target, which is what `bisect.bisect_left(items,target)` 
+
+Bisect right algorithm:
+```python
+ def bisect_left(arr, low, high, target):
+    
+    while low<high:
+        mid = (low+high)//2 
+        
+        if arr[mid]<= target: # increase
+            low = mid 
+        else:
+            high = mid-1
+    return low
+
+
+print(bisect_left([10,11,13,50], 0, 4, 20))
+print(bisect_left([10,11,13,15,18,19,50], 0, 7, 20))
+print(bisect_left([10,11,13,15,18,19,50], 3, 7, 20))
+print(bisect_left([10,11,13,15,18,19,50], 0, 7, 10))
+```
+
 
 When should `low<=high` or `low<high`?
 * Look out for special cases such as `[1]`

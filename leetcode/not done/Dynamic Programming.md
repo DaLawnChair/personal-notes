@@ -6,16 +6,17 @@
 * Find relationship between the subproblems
 
 **Common problems:**
-*  n length array, subproblem is finding the ordered subsequence of length i
+* n length array, subproblem is finding the ordered subsequence of length i
 * Sequence of length n, in random order (need to sort first), subproblem is finding the ordered subsequence of length i
 * Given 2 sequences, need to find appropriate subsequence of both of these sequences
 	* same idea as before
 * 2D matrix as input, and need to find submatrix of dimensions less than original 
 * (uncommon) problems where the sequence starts in the middle of the sequence
-* 
+ 
 **Example:**
 * [2466. Count Ways To Build Good Strings](https://leetcode.com/problems/count-ways-to-build-good-strings/)
 	* Can make the n'th way by checking the number of ways to make the n-zero and n-one way to make it, base condition 1 way
+    * Relies on the idea that `list index of i-idx>=i` for easy syntax of just doing `dp[i-ones] and dp[i-zeros]` 
 * [322. Coin Change](https://leetcode.com/problems/coin-change/)
 	* The max possible value for # of coins is amount+1 because the value coin is `1<=coin`
 	* We can make a dp table where the index is the amount and the value is the # of coins needed to get that `ith` amount

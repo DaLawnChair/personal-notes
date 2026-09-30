@@ -6,7 +6,7 @@
 * Pointer at both ends:
 	* Set up 2 pointers at both ends
 * Fast/Slow pointer:
-	* set up 2 pointers, both at the start, but one increments faster than the other
+	* set up 2 pointers, both at the start, but one increments faster than the other (usually in link list problems)
 * Iterate over the array, based on some criterion, increment `l` or decrement `r`
 * `Note:` there are a lot of parallels between binary search, two pointers, and sliding window
 **Example:**
@@ -36,6 +36,8 @@ class Solution:
 * [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/submissions/1494555888/) (two pointer) $\star\star\star$
 	* `[hard conceptuall, watch video]` https://www.youtube.com/watch?v=ZI2z5pq0TqA
 	* actually very simple when brought down into conditions for when to choose left and right and the math behind the 3 cases of the max value and the current height
-		* can be done numerous other ways, but two pointer is the best
+		* can be done numerous other ways, but two pointer is the best as it only contains 2 pointers, 
+        * alternative solution is to view it as water contained is `min(max_left[i],max_right[i]) - height[i]` for every position i, taking the value if it is >0. 
+        * two pointer solution utilizes the fact that we are bounded by our max_left[i] or max_right[i] value when calculating the water contained
 **Conceptual videos:**
 * https://www.youtube.com/watch?v=On03HWe2tZM

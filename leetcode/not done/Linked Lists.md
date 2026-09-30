@@ -62,7 +62,7 @@ def fastSlow(self. head):
 **Example:**
 * [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 	* Set 1 pointer to move twice as fast as the other, if faster pointer terminates to None, then no cycle, otherwise there is a cycle
-* [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+* [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) $\star \star$c
 	* Because the values are within the size of the array, we can actually loop through the values inside the array without sequential iteration.
 * [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) $\star$ **Good for interviews**
 	* Use two pointers, start one for N integers, and then start the second pointer
